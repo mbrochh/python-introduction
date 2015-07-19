@@ -1,0 +1,55 @@
+<section>
+  <section>
+    <h2>Install Python on OSX</h2>
+    <blockquote>Should already be installed. If you want a "fresh" install, you can do this:</blockquote>
+    <ol>
+      <li>Install Homebrew: <a href="http://brew.sh">http://brew.sh</a></li>
+      <li>
+        Install Python
+        <pre><code class="bash">brew install python</code></pre>
+      </li>
+      <li>
+        Where is it?
+<pre><code class="bash">brew list python
+# You don't really need to know this</code></pre>
+      </li>
+      <li>
+        Check Installation:
+        <pre><code class="bash">python --version</code></pre>
+      </script>
+  </section>
+
+  <section data-markdown>
+      <script type="text/template">
+        ## Install Python on Windows
+
+        > Install it like any other Windows program
+
+        1. Download & install Python: https://www.python.org/downloads/
+        2. Where is it?
+           ```
+           C:\Python27
+           ```
+      </script>
+  </section>
+
+  <section>
+    <h2>Install Python on Ubuntu</h2>
+    <blockquote>Should already be installed, but we need some extras</blockquote>
+    <ol style="width: 700px;">
+      <li>
+        Update software
+        <pre><code class="bash">sudo apt-get update && sudo apt-get upgrade</code></pre>
+      </li>
+      <li>
+        Install Python dependencies
+        <pre><code class="bash">sudo apt-get install python-dev</code></pre>
+      </li>
+      <li>
+        Where is it?
+<pre><code class="bash">/usr/bin/python
+/usr/local/lib/python2.7
+ # You don't really need to know this</code></pre>
+      </script>
+  </section>
+</section>

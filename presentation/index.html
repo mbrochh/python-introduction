@@ -15,7 +15,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+		<link rel="stylesheet" href="css/theme/mbrochh.css" id="theme">
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -41,56 +42,249 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
                 
-<section>
-    <h1>Your Title</h1>
-    <h3>Your sub-title</h3>
+<section data-markdown>
+    <script type="text/template">
+      # Welcome to Python
+      #### A fast and easy introduction to<br /> Python programming
+    </script>
 </section>
 <section data-markdown>
     <script type="text/template">
-        ## Testing Markdown
+        ## This is the plan
 
-        This _should_ be __bold__ and this should be a [link](https://github.com/mbrochh/reveal-template).
-
-        ### Heading 3
-
-        * A list
-        * With three
-        * items
+        * Install Python 2.7
+        * Starting Python from the Terminal
+        * Install Virtualenv & Virtualenvwrapper
+        * Install & configure Atom.io editor
+        * Create and run our first Python program
     </script>
 </section>
 <section>
-    <h2>Testing code snippets</h2>
-    <pre><code>
-    import os
-    path = os.path.join('foo', 'bar')
-    def do_something(path):
-        return path
-    </code></pre>
+  <section>
+    <h2>Install Python on OSX</h2>
+    <blockquote>Should already be installed. If you want a "fresh" install, you can do this:</blockquote>
+    <ol>
+      <li>Install Homebrew: <a href="http://brew.sh">http://brew.sh</a></li>
+      <li>
+        Install Python
+        <pre><code class="bash">brew install python</code></pre>
+      </li>
+      <li>
+        Where is it?
+<pre><code class="bash">brew list python
+# You don't really need to know this</code></pre>
+      </li>
+      <li>
+        Check Installation:
+        <pre><code class="bash">python --version</code></pre>
+      </script>
+  </section>
+
+  <section data-markdown>
+      <script type="text/template">
+        ## Install Python on Windows
+
+        > Install it like any other Windows program
+
+        1. Download & install Python: https://www.python.org/downloads/
+        2. Where is it?
+           ```
+           C:\Python27
+           ```
+      </script>
+  </section>
+
+  <section>
+    <h2>Install Python on Ubuntu</h2>
+    <blockquote>Should already be installed, but we need some extras</blockquote>
+    <ol style="width: 700px;">
+      <li>
+        Update software
+        <pre><code class="bash">sudo apt-get update && sudo apt-get upgrade</code></pre>
+      </li>
+      <li>
+        Install Python dependencies
+        <pre><code class="bash">sudo apt-get install python-dev</code></pre>
+      </li>
+      <li>
+        Where is it?
+<pre><code class="bash">/usr/bin/python
+/usr/local/lib/python2.7
+ # You don't really need to know this</code></pre>
+      </script>
+  </section>
 </section>
 <section>
-    <section data-background="#ff0000" data-markdown>
-        <script type="text/template">
-            ## Testing backgrounds
+  <section data-markdown>
+      <script type="text/template">
+          ## Starting Python on OSX & Ubuntu
 
-            Now we are red
-        </script>
-    </section>
-    <section data-background="#00ff00" data-markdown>
-        <script type="text/template">
-            ## Testing backgrounds
+          1. Open a Terminal
+          2. Execute Python
+             ```bash
+             python
+             ```
+      </script>
+  </section>
 
-            Now we are green
-        </script>
-    </section>
-    <section data-background="#0000ff" data-markdown>
-        <script type="text/template">
-            ## Testing backgrounds
+  <section data-markdown>
+      <script type="text/template">
+          ## Starting Python on Windows
 
-            Now we are blue
+          1. Search for "Advanced System Settings" in Startmenu
+          2. Click at "Environment Variables"
+          3. Doubleclick "Path" variable
+          4. Append at the end:
+             ```bash
+             # The semicolon at the beginning is important!
+             ;C:\Python27;C:\Python27\Scripts
+             ```
+          5. Open Cmd
+          5. Execute Python
+             ```bash
+             python
+             ```
+      </script>
+  </section>
 
-            <small>dabadi dabadai...</small>
-        </script>
-    </section>
+  <section data-markdown>
+    <script type="text/template">
+      ## Stopping Python
+
+      > Why would you ever want to do this?... ;-)
+
+      1. Type this into the Python interpreter
+         ```python
+         exit()
+         ```
+    </script>
+  </section>
+</section>
+<section>
+  <section>
+    <h2>Install Virtualenv on OSX & Ubuntu (I)</h2>
+    <ol style="width: 600px;">
+      <li>
+        Install pip
+        <pre><code class="bash">sudo easy_install pip</pre></code>
+      </li>
+      <li>
+        Install virtualenv
+        <pre><code class="bash">sudo pip install virtualenv</pre></code>
+      </li>
+      <li>
+        Install virtualenvwrapper
+        <pre><code class="bash">sudo pip install virtualenvwrapper</pre></code>
+      </li>
+      <li>to be continued...</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Install Virtualenv on OSX & Ubuntu (II)</h2>
+    <ol style="width: 800px;">
+      <li>
+        Open the file `.bashrc` in an editor
+<pre><code class="bash"># On OSX:
+open ~/.bashrc
+# On Ubuntu:
+gedit ~/.bashrc</code></pre>
+      </li>
+      <li>
+        Add to the end of the file:
+<pre><code class="bash">export WORKON_HOME=~/Envs
+export PIP_VIRTUALENV_BASE=~/Envs
+# On OSX
+source /usr/local/bin/virtualenvwrapper.sh
+# On Ubuntu
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh</code></pre>
+      </li>
+    </ol>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ## Install Virtualenv on Windows
+
+      1. Install via pip
+
+      ```bash
+      pip install virtualenvwrapper-win
+      ```
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ## Using Virtualenv
+
+      1. Create new virtualenv
+         ```bash
+         mkvirtualenv testenv
+         ```
+      2. Deactivate current virtualenv
+         ```bash
+         deactivate
+         ```
+      3. Activate existing virtualenv
+         ```bash
+         workon testenv
+         ```
+      4. Where is it?
+         ```bash
+         # OSX & Ubuntu:
+         ~/Envs/testenv
+
+         # Windows:
+         C:/Users/Username/Envs
+         ```
+    </script>
+  </section>
+</section>
+<section>
+  <section data-markdown>
+    <script type="text/template">
+      ##Install & configure Atom.io editor
+
+      1. Download & install from https://atom.io
+      1. Open Settings > Install
+      1. Install `"autocomplete-python"`
+      1. Install `"atom-python-debugger"`
+      1. Install `"linter"`
+      1. Install `"linter-flake8"`
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Install flake8 globally
+
+      > This is to make sure that `"linter-flake8"` works
+
+      1. Open a Terminal and execute:
+         ```bash
+         # On Windows
+         pip install flake8
+         # On OSX & Ubuntu
+         sudo pip install flake8
+         ```
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Configure autocomplete-python
+
+      1. Open Atom > Settings > Packages > autocomplete-python > Settings
+      2. Set the `"Extra PATH"` setting to your virtualenv folder:
+         ```bash
+         # On OSX & Ubuntu:
+         $HOME/Envs/testenv/lib/python2.7/site-packages
+         # On Windows:
+         C:\Users\Username\Envs\testenv\Lib\site-packages
+         ```
+    </script>
+  </section>
 </section>
 
             </div>
@@ -105,6 +299,7 @@
 			// Full list of configuration options available at:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
+				width: "100%",
 				controls: true,
 				progress: true,
 				history: true,

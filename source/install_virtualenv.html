@@ -1,0 +1,81 @@
+<section>
+  <section>
+    <h2>Install Virtualenv on OSX & Ubuntu (I)</h2>
+    <ol style="width: 600px;">
+      <li>
+        Install pip
+        <pre><code class="bash">sudo easy_install pip</pre></code>
+      </li>
+      <li>
+        Install virtualenv
+        <pre><code class="bash">sudo pip install virtualenv</pre></code>
+      </li>
+      <li>
+        Install virtualenvwrapper
+        <pre><code class="bash">sudo pip install virtualenvwrapper</pre></code>
+      </li>
+      <li>to be continued...</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Install Virtualenv on OSX & Ubuntu (II)</h2>
+    <ol style="width: 800px;">
+      <li>
+        Open the file `.bashrc` in an editor
+<pre><code class="bash"># On OSX:
+open ~/.bashrc
+# On Ubuntu:
+gedit ~/.bashrc</code></pre>
+      </li>
+      <li>
+        Add to the end of the file:
+<pre><code class="bash">export WORKON_HOME=~/Envs
+export PIP_VIRTUALENV_BASE=~/Envs
+# On OSX
+source /usr/local/bin/virtualenvwrapper.sh
+# On Ubuntu
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh</code></pre>
+      </li>
+    </ol>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ## Install Virtualenv on Windows
+
+      1. Install via pip
+
+      ```bash
+      pip install virtualenvwrapper-win
+      ```
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ## Using Virtualenv
+
+      1. Create new virtualenv
+         ```bash
+         mkvirtualenv testenv
+         ```
+      2. Deactivate current virtualenv
+         ```bash
+         deactivate
+         ```
+      3. Activate existing virtualenv
+         ```bash
+         workon testenv
+         ```
+      4. Where is it?
+         ```bash
+         # OSX & Ubuntu:
+         ~/Envs/testenv
+
+         # Windows:
+         C:/Users/Username/Envs
+         ```
+    </script>
+  </section>
+</section>

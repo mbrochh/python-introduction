@@ -1,0 +1,45 @@
+<section>
+  <section data-markdown>
+    <script type="text/template">
+      ##Install & configure Atom.io editor
+
+      1. Download & install from https://atom.io
+      1. Open Settings > Install
+      1. Install `"autocomplete-python"`
+      1. Install `"atom-python-debugger"`
+      1. Install `"linter"`
+      1. Install `"linter-flake8"`
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Install flake8 globally
+
+      > This is to make sure that `"linter-flake8"` works
+
+      1. Open a Terminal and execute:
+         ```bash
+         # On Windows
+         pip install flake8
+         # On OSX & Ubuntu
+         sudo pip install flake8
+         ```
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Configure autocomplete-python
+
+      1. Open Atom > Settings > Packages > autocomplete-python > Settings
+      2. Set the `"Extra PATH"` setting to your virtualenv folder:
+         ```bash
+         # On OSX & Ubuntu:
+         $HOME/Envs/testenv/lib/python2.7/site-packages
+         # On Windows:
+         C:\Users\Username\Envs\testenv\Lib\site-packages
+         ```
+    </script>
+  </section>
+</section>
