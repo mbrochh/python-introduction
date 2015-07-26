@@ -2,9 +2,22 @@
 
 {% block slides %}
 {% include "source/title.html" %}
-{% include "source/table_of_content.html" %}
+{% include "source/whoami.html" %}
+{% include "source/thanks_to_paypal.html" %}
+{% with active="intro" %}{% include "source/table_of_content.html" %}{% endwith %}
+{% include "source/introduction.html" %}
+{% with active="install-python" %}{% include "source/table_of_content.html" %}{% endwith %}
 {% include "source/install_python.html" %}
+{% with active="starting-python" %}{% include "source/table_of_content.html" %}{% endwith %}
 {% include "source/starting_python.html" %}
+{% with active="install-virtualenv" %}{% include "source/table_of_content.html" %}{% endwith %}
 {% include "source/install_virtualenv.html" %}
+{% with active="install-atom" %}{% include "source/table_of_content.html" %}{% endwith %}
 {% include "source/install_atom.html" %}
+{% with active="first-program" %}{% include "source/table_of_content.html" %}{% endwith %}
+{% include "source/first_program.html" %}
+{% with active="debugging" %}{% include "source/table_of_content.html" %}{% endwith %}
+{% include "source/debugging.html" %}
+{% include "source/recap.html" %}
+{% include "source/thankyou.html" %}
 {% endblock %}

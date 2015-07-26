@@ -2,7 +2,10 @@ from fabric.api import local
 from jinja2 import Environment, FileSystemLoader
 
 
-template_env = Environment(loader=FileSystemLoader('.'))
+template_env = Environment(
+    loader=FileSystemLoader('.'),
+    extensions=['jinja2.ext.with_']
+)
 
 
 def build():

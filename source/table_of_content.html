@@ -1,11 +1,15 @@
-<section data-markdown>
-    <script type="text/template">
-        ## This is the plan
+<section>
+  <h2>This is the plan</h2>
 
-        * Install Python 2.7
-        * Starting Python from the Terminal
-        * Install Virtualenv & Virtualenvwrapper
-        * Install & configure Atom.io editor
-        * Create and run our first Python program
-    </script>
+  <ul>
+    {% with color="#17BAF9" %}
+    <li><span {% if active == 'intro' %}class="toc-active" style="color: {{ color }};"{% endif %}>Introduction</span></li>
+    <li><span {% if active == 'install-python' %}class="toc-active" style="color: {{ color }};"{% endif %}>Install Python 2.7</span></li>
+    <li><span {% if active == 'starting-python' %}class="toc-active" style="color: {{ color }};"{% endif %}>Starting Python from the Terminal</span></li>
+    <li><span {% if active == 'install-virtualenv' %}class="toc-active" style="color: {{ color }};"{% endif %}>Install Virtualenv & Virtualenvwrapper</span></li>
+    <li><span {% if active == 'install-atom' %}class="toc-active" style="color: {{ color }};"{% endif %}>Install & configure Atom.io editor</span></li>
+    <li><span {% if active == 'first-program' %}class="toc-active" style="color: {{ color }};"{% endif %}>Create your first Python program</span></li>
+    <li><span {% if active == 'debugging' %}class="toc-active" style="color: {{ color }};"{% endif %}>Debugging</span></li>
+    {% endwith %}
+  </ul>
 </section>

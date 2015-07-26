@@ -1,0 +1,44 @@
+<section>
+  <section data-markdown>
+    <script type="text/template">
+      ##Your first Python program!
+
+      * Create a "``Projects``" folder in your home folder
+      * Create a "``test``" folder inside the "``Projects``" folder
+      * Create a virtual environment: "``mkvirtualenv test``"
+      * Start "``atom .``" inside the "``test``" folder
+      * Create a file "``myprogram.py``" in Atom
+    </script>
+  </section>
+
+  <section>
+    <h2>myprogram.py</h2>
+
+    <pre><code class="py" style="height: 600px;">
+import datetime
+my_variable = "Foobar"
+
+def get_current_time():
+    return datetime.datetime.now()
+
+print my_variable
+print get_current_time()
+
+for number in range(10):
+    if number == 5:
+        print "Number 5 is the best!"
+    else:
+        print number
+    </code></pre>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Run your program
+
+      ```
+      python myprogram.py
+      ```
+    </script>
+  </section>
+</section>
