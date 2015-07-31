@@ -1,4 +1,5 @@
 <section>
+  {% with active=active %}{% include "source/table_of_content.html" %}{% endwith %}
   <section>
     <h2>Install Virtualenv on OSX & Ubuntu (I)</h2>
 
@@ -25,20 +26,18 @@
     <h2>Install Virtualenv on OSX & Ubuntu (II)</h2>
     <ol style="width: 800px;">
       <li>
-        Open the file `.bashrc` or `.bash_profile` in an editor
-<pre><code class="bash"># On OSX:
-touch ~/.bash_profile && open ~/.bash_profile
-# On Ubuntu:
-gedit ~/.bashrc</code></pre>
+         On OSX, execute the following commands in your Terminal:
+<pre><code class="bash" style="width: 900px;">
+echo "export WORKON_HOME=~/Envs" >> ~/.bash_profile
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bash_profile
+</code></pre>
       </li>
       <li>
-        Add to the end of the file:
-<pre><code class="bash">export WORKON_HOME=~/Envs
-export PIP_VIRTUALENV_BASE=~/Envs
-# On OSX
-source /usr/local/bin/virtualenvwrapper.sh
-# On Ubuntu
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh</code></pre>
+         On Ubuntu, execute the following commands in your Terminal:
+<pre><code class="bash" style="width: 900px;">
+echo "export WORKON_HOME=~/Envs" >> ~/.bashrc
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+</code></pre>
       </li>
     </ol>
   </section>
@@ -47,7 +46,7 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh</code></pre>
     <script type="text/template">
       ## Install Virtualenv on Windows
 
-      1. Install via pip
+      1. Open your Command Line and execute the following command
 
       ```bash
       pip install virtualenvwrapper-win
@@ -59,25 +58,26 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh</code></pre>
     <script type="text/template">
       ## Using Virtualenv
 
+      1. Close your Terminal and open a new one
       1. Create new virtualenv
          ```bash
-         mkvirtualenv testenv
+         mkvirtualenv test
          ```
-      2. Deactivate current virtualenv
+      1. Deactivate current virtualenv
          ```bash
          deactivate
          ```
-      3. Activate existing virtualenv
+      1. Activate existing virtualenv
          ```bash
-         workon testenv
+         workon test
          ```
-      4. Where is it?
+      1. Where is it?
          ```bash
          # OSX & Ubuntu:
-         ~/Envs/testenv
+         ~/Envs/test
 
          # Windows:
-         C:/Users/Username/Envs
+         C:/Users/Username/Envs/test
          ```
     </script>
   </section>

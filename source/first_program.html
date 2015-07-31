@@ -1,4 +1,5 @@
 <section>
+  {% with active=active %}{% include "source/table_of_content.html" %}{% endwith %}
   <section data-markdown>
     <script type="text/template">
       ##Your first Python program!
@@ -36,6 +37,8 @@ for number in range(10):
     <script type="text/template">
       ##Run your program
 
+      1. In your terminal, type:
+      
       ```
       python myprogram.py
       ```

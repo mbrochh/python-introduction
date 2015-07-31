@@ -1,4 +1,5 @@
 <section>
+  {% with active=active %}{% include "source/table_of_content.html" %}{% endwith %}
   <section data-markdown>
     <script type="text/template">
       ##Install & configure Atom.io editor
@@ -26,21 +27,6 @@
          pip install flake8
          # On OSX & Ubuntu
          sudo pip install flake8
-         ```
-    </script>
-  </section>
-
-  <section data-markdown>
-    <script type="text/template">
-      ##Configure autocomplete-python
-
-      1. Open Atom > Settings > Packages > autocomplete-python > Settings
-      2. Set the `"Extra PATH"` setting to your virtualenv folder:
-         ```bash
-         # On OSX & Ubuntu:
-         $HOME/Envs/testenv/lib/python2.7/site-packages
-         # On Windows:
-         C:\Users\Username\Envs\testenv\Lib\site-packages
          ```
     </script>
   </section>

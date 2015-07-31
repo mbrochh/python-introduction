@@ -1,7 +1,8 @@
 <section>
+  {% with active=active %}{% include "source/table_of_content.html" %}{% endwith %}
   <section>
     <h2>Install Python on OSX</h2>
-    <blockquote>Should already be installed. If you want a "fresh" install, you can do this:</blockquote>
+    <blockquote>It is installed. If you ever want a "fresh" install, you can do this (but really don't need to for this tutorial):</blockquote>
     <ol>
       <li>Install Homebrew: <a href="http://brew.sh">http://brew.sh</a></li>
       <li>
@@ -23,19 +24,16 @@
       <script type="text/template">
         ## Install Python on Windows
 
-        > Install it like any other Windows program
-
-        1. Download & install Python: https://www.python.org/downloads/
-        2. Where is it?
-           ```
-           C:\Python27
-           ```
+        1. Download & install Python 2.7: https://www.python.org/downloads/
+        1. Leave the default install location at "C:/Python27"
+        1. Make sure to select "Add Python.exe to Path" during the installation
+        <img src="images/install.jpg" />
       </script>
   </section>
 
   <section>
     <h2>Install Python on Ubuntu</h2>
-    <blockquote>Should already be installed, but we need some extras</blockquote>
+    <blockquote>It is already installed, but you need some extras</blockquote>
     <ol style="width: 700px;">
       <li>
         Update software

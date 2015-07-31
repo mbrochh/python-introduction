@@ -1,12 +1,18 @@
 <section>
+  {% with active=active %}{% include "source/table_of_content.html" %}{% endwith %}
   <section data-markdown>
       <script type="text/template">
           ## Starting Python on OSX & Ubuntu
 
-          1. Open a Terminal
-          2. Execute Python
+          1. Press "COMMAND+SPACE" and <br />
+             search for "Terminal" in Spotlight
+          1. Execute Python
              ```bash
              python
+             ```
+          1. Exit with:
+             ```python
+             exit()
              ```
       </script>
   </section>
@@ -15,37 +21,20 @@
       <script type="text/template">
           ## Starting Python on Windows
 
-          1. Search for "Advanced System Settings" in Startmenu
-          2. Click at "Environment Variables"
-          3. Doubleclick "Path" variable
-          4. Append at the end:
-             ```bash
-             # The semicolon at the beginning is important!
-             ;C:\Python27;C:\Python27\Scripts
-             ```
-          5. Open Cmd
-          6. Execute Python
-             ```bash
-             python
-             ```
-          7. Install useful modules
+          1. In the Startmenu search for "cmd" and open "Command Line"
+          1. First install useful modules
              ```bash
              pip install pyreadline
              pip install ipdb
              ```
+          1. Now start Python:
+             ```bash
+             python
+             ```
+          1. Exit with:
+             ```python
+             exit()
+             ```
       </script>
-  </section>
-
-  <section data-markdown>
-    <script type="text/template">
-      ## Stopping Python
-
-      > Why would you ever want to do this?... ;-)
-
-      1. Type this into the Python interpreter
-         ```python
-         exit()
-         ```
-    </script>
   </section>
 </section>

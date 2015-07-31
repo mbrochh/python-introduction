@@ -68,6 +68,7 @@
   </script>
 </section>
 <section>
+  <section>
   <h2>This is the plan</h2>
 
   <ul>
@@ -82,7 +83,6 @@
     
   </ul>
 </section>
-<section>
   <section data-markdown>
     <script type="text/template">
       ##Introduction
@@ -112,6 +112,7 @@
 
 </section>
 <section>
+  <section>
   <h2>This is the plan</h2>
 
   <ul>
@@ -126,10 +127,9 @@
     
   </ul>
 </section>
-<section>
   <section>
     <h2>Install Python on OSX</h2>
-    <blockquote>Should already be installed. If you want a "fresh" install, you can do this:</blockquote>
+    <blockquote>It is installed. If you ever want a "fresh" install, you can do this (but really don't need to for this tutorial):</blockquote>
     <ol>
       <li>Install Homebrew: <a href="http://brew.sh">http://brew.sh</a></li>
       <li>
@@ -151,19 +151,16 @@
       <script type="text/template">
         ## Install Python on Windows
 
-        > Install it like any other Windows program
-
-        1. Download & install Python: https://www.python.org/downloads/
-        2. Where is it?
-           ```
-           C:\Python27
-           ```
+        1. Download & install Python 2.7: https://www.python.org/downloads/
+        1. Leave the default install location at "C:/Python27"
+        1. Make sure to select "Add Python.exe to Path" during the installation
+        <img src="images/install.jpg" />
       </script>
   </section>
 
   <section>
     <h2>Install Python on Ubuntu</h2>
-    <blockquote>Should already be installed, but we need some extras</blockquote>
+    <blockquote>It is already installed, but you need some extras</blockquote>
     <ol style="width: 700px;">
       <li>
         Update software
@@ -182,6 +179,7 @@
   </section>
 </section>
 <section>
+  <section>
   <h2>This is the plan</h2>
 
   <ul>
@@ -196,15 +194,19 @@
     
   </ul>
 </section>
-<section>
   <section data-markdown>
       <script type="text/template">
           ## Starting Python on OSX & Ubuntu
 
-          1. Open a Terminal
-          2. Execute Python
+          1. Press "COMMAND+SPACE" and <br />
+             search for "Terminal" in Spotlight
+          1. Execute Python
              ```bash
              python
+             ```
+          1. Exit with:
+             ```python
+             exit()
              ```
       </script>
   </section>
@@ -213,41 +215,25 @@
       <script type="text/template">
           ## Starting Python on Windows
 
-          1. Search for "Advanced System Settings" in Startmenu
-          2. Click at "Environment Variables"
-          3. Doubleclick "Path" variable
-          4. Append at the end:
-             ```bash
-             # The semicolon at the beginning is important!
-             ;C:\Python27;C:\Python27\Scripts
-             ```
-          5. Open Cmd
-          6. Execute Python
-             ```bash
-             python
-             ```
-          7. Install useful modules
+          1. In the Startmenu search for "cmd" and open "Command Line"
+          1. First install useful modules
              ```bash
              pip install pyreadline
              pip install ipdb
              ```
+          1. Now start Python:
+             ```bash
+             python
+             ```
+          1. Exit with:
+             ```python
+             exit()
+             ```
       </script>
-  </section>
-
-  <section data-markdown>
-    <script type="text/template">
-      ## Stopping Python
-
-      > Why would you ever want to do this?... ;-)
-
-      1. Type this into the Python interpreter
-         ```python
-         exit()
-         ```
-    </script>
   </section>
 </section>
 <section>
+  <section>
   <h2>This is the plan</h2>
 
   <ul>
@@ -262,7 +248,6 @@
     
   </ul>
 </section>
-<section>
   <section>
     <h2>Install Virtualenv on OSX & Ubuntu (I)</h2>
 
@@ -289,20 +274,18 @@
     <h2>Install Virtualenv on OSX & Ubuntu (II)</h2>
     <ol style="width: 800px;">
       <li>
-        Open the file `.bashrc` or `.bash_profile` in an editor
-<pre><code class="bash"># On OSX:
-touch ~/.bash_profile && open ~/.bash_profile
-# On Ubuntu:
-gedit ~/.bashrc</code></pre>
+         On OSX, execute the following commands in your Terminal:
+<pre><code class="bash" style="width: 900px;">
+echo "export WORKON_HOME=~/Envs" >> ~/.bash_profile
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bash_profile
+</code></pre>
       </li>
       <li>
-        Add to the end of the file:
-<pre><code class="bash">export WORKON_HOME=~/Envs
-export PIP_VIRTUALENV_BASE=~/Envs
-# On OSX
-source /usr/local/bin/virtualenvwrapper.sh
-# On Ubuntu
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh</code></pre>
+         On Ubuntu, execute the following commands in your Terminal:
+<pre><code class="bash" style="width: 900px;">
+echo "export WORKON_HOME=~/Envs" >> ~/.bashrc
+echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
+</code></pre>
       </li>
     </ol>
   </section>
@@ -311,7 +294,7 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh</code></pre>
     <script type="text/template">
       ## Install Virtualenv on Windows
 
-      1. Install via pip
+      1. Open your Command Line and execute the following command
 
       ```bash
       pip install virtualenvwrapper-win
@@ -323,30 +306,32 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh</code></pre>
     <script type="text/template">
       ## Using Virtualenv
 
+      1. Close your Terminal and open a new one
       1. Create new virtualenv
          ```bash
-         mkvirtualenv testenv
+         mkvirtualenv test
          ```
-      2. Deactivate current virtualenv
+      1. Deactivate current virtualenv
          ```bash
          deactivate
          ```
-      3. Activate existing virtualenv
+      1. Activate existing virtualenv
          ```bash
-         workon testenv
+         workon test
          ```
-      4. Where is it?
+      1. Where is it?
          ```bash
          # OSX & Ubuntu:
-         ~/Envs/testenv
+         ~/Envs/test
 
          # Windows:
-         C:/Users/Username/Envs
+         C:/Users/Username/Envs/test
          ```
     </script>
   </section>
 </section>
 <section>
+  <section>
   <h2>This is the plan</h2>
 
   <ul>
@@ -361,7 +346,6 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh</code></pre>
     
   </ul>
 </section>
-<section>
   <section data-markdown>
     <script type="text/template">
       ##Install & configure Atom.io editor
@@ -395,21 +379,6 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh</code></pre>
 
   <section data-markdown>
     <script type="text/template">
-      ##Configure autocomplete-python
-
-      1. Open Atom > Settings > Packages > autocomplete-python > Settings
-      2. Set the `"Extra PATH"` setting to your virtualenv folder:
-         ```bash
-         # On OSX & Ubuntu:
-         $HOME/Envs/testenv/lib/python2.7/site-packages
-         # On Windows:
-         C:\Users\Username\Envs\testenv\Lib\site-packages
-         ```
-    </script>
-  </section>
-
-  <section data-markdown>
-    <script type="text/template">
       ##Important shortcuts
 
       * **COMMAND+\**: Show project files
@@ -430,6 +399,7 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh</code></pre>
   </section>
 </section>
 <section>
+  <section>
   <h2>This is the plan</h2>
 
   <ul>
@@ -444,7 +414,6 @@ source /usr/share/virtualenvwrapper/virtualenvwrapper.sh</code></pre>
     
   </ul>
 </section>
-<section>
   <section data-markdown>
     <script type="text/template">
       ##Your first Python program!
@@ -482,6 +451,8 @@ for number in range(10):
     <script type="text/template">
       ##Run your program
 
+      1. In your terminal, type:
+      
       ```
       python myprogram.py
       ```
@@ -489,6 +460,7 @@ for number in range(10):
   </section>
 </section>
 <section>
+  <section>
   <h2>This is the plan</h2>
 
   <ul>
@@ -503,7 +475,6 @@ for number in range(10):
     
   </ul>
 </section>
-<section>
   <section data-markdown>
     <script type="text/template">
       ##Debugging your program
