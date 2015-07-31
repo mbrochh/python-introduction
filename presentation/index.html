@@ -129,7 +129,7 @@
 </section>
   <section>
     <h2>Install Python on OSX</h2>
-    <blockquote>It is installed. If you ever want a "fresh" install, you can do this (but really don't need to for this tutorial):</blockquote>
+    <blockquote>It is already installed. If you ever want a "fresh" install, you can do this (but really don't need to for this tutorial):</blockquote>
     <ol>
       <li>Install Homebrew: <a href="http://brew.sh">http://brew.sh</a></li>
       <li>
@@ -152,7 +152,7 @@
         ## Install Python on Windows
 
         1. Download & install Python 2.7: https://www.python.org/downloads/
-        1. Leave the default install location at "C:/Python27"
+        1. Leave the default install location at "C:\Python27"
         1. Make sure to select "Add Python.exe to Path" during the installation
         <img src="images/install.jpg" />
       </script>
@@ -198,8 +198,10 @@
       <script type="text/template">
           ## Starting Python on OSX & Ubuntu
 
-          1. Press "COMMAND+SPACE" and <br />
+          1. On OSX, press "COMMAND+SPACE" and <br />
              search for "Terminal" in Spotlight
+          1. On Ubuntu, click at the top left Ubuntu icon<br />
+             and search your computer for "Terminal"
           1. Execute Python
              ```bash
              python
@@ -374,6 +376,23 @@ echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
          # On OSX & Ubuntu
          sudo pip install flake8
          ```
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ## Starting Atom
+
+      1. Open a Terminal
+      2. "cd" into the directory of your project, for example
+         ```bash
+         cd Projects/test
+         ```
+      3. Execute
+         ```bash
+         atom .
+         ```
+      4. The dot means "this directory"
     </script>
   </section>
 
