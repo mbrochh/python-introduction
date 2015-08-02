@@ -55,7 +55,7 @@
 <section data-markdown>
     <script type="text/template">
       # Welcome to Python
-      #### A fast and easy introduction to<br /> Python programming
+      #### An introduction to setup your Computer<br /> for Python programming
     </script>
 </section>
 <section data-markdown>
@@ -205,12 +205,18 @@
     <script type="text/template">
       ##Your Home Folder
 
-      * Type **pwd** into the terminal
+      * Type **pwd** into the terminal:
+        ```bash
+        pwd
+        ```
       * It will show which folder you are currently in
       * For a newly opened terminal, that is your home folder
       * Your home folder is also called "**~**" (tilde)
       * No matter where you are, you can type **cd ~**<br />
         to get into your home folder
+        ```bash
+        cd ~
+        ```
       * By the way: **pwd** stands for **print working directory**
     </script>
   </section>
@@ -219,9 +225,12 @@
     <script type="text/template">
       ##List The Current Folder
 
-      * By the way, "folder" and "directory" is the same
-      * I say folder, becayse it's shorter to write :)
+      * Hint: "folder" and "directory" is the same
+      * I say folder, because it's shorter to write :)
       * Type **ls** to list the content of the current folder
+        ```bash
+        ls
+        ```
       * By the way: **ls** stands for **list**
     </script>
   </section>
@@ -233,6 +242,9 @@
       * Press **TAB** to autocomplete things
       * Type **cd ~/Documents** to move into the<br />
         Documents folder in your home directory
+        ```bash
+        cd ~/Documents
+        ```
       * By the way: **cd** stands for **change directory**
     </script>
   </section>
@@ -242,10 +254,20 @@
       ##Create a new folder
 
       * Type **cd ~** to move into your home folder
+        ```bash
+        cd ~
+        ```
       * Type **mkdir Projects** to create a new folder<br />
         called "Projects"
+        ```bash
+        mkdir Projects
+        ```
       * How about creating a folder for our first project as well?
       * Type **cd ~/Projects** and then **mkdir test**
+        ```bash
+        cd ~/Projects
+        mkdir test
+        ```
       * By the way: **mkdir** stands for **make directory**
     </script>
   </section>
@@ -255,10 +277,22 @@
       ##Create a new file
 
       * Type **cd ~/Projects/test** to move into your test project folder
+        ```bash
+        cd ~/Projects/test
+        ```
       * On OSX/Ubuntu, type **touch test.py** to create a new file called "test.py"
+        ```bash
+        touch test.py
+        ```
       * On Windows, type **echo $null >> test.py**
+        ```bash
+        echo $null >> test.py
+        ```
       * So sorry, Windows doesn't have a nicer command for creating files :(
       * Type **ls** to see if your new file is there
+        ```bash
+        ls
+        ```
     </script>
   </section>
 
@@ -300,7 +334,11 @@
       <li>Install Homebrew: <a href="http://brew.sh">http://brew.sh</a></li>
       <li>
         Install Python
-        <pre><code class="bash">brew install python</code></pre>
+<pre><code class="bash">
+# Hint: You don't need to do this!
+# This is just an tip for the future.
+brew install python
+</code></pre>
       </li>
     </ol>
   </section>
@@ -471,6 +509,18 @@ echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
 
   <section data-markdown>
     <script type="text/template">
+      ## What is this pip thing?
+
+      * **pip** is a program that is written in Python
+      * It allows you to download and install other programs<br />
+        which are also written in Python
+      * You can search for available Python programs at<br />
+        [warehouse.python.org](https://warehouse.python.org)
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
       ## Using Virtualenv
 
       1. Close your Terminal and open a new one
@@ -539,6 +589,22 @@ echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
          # On OSX & Ubuntu
          sudo pip install flake8
          ```
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ## What is this flake8 and linter thing?
+
+      * A **linter** is a program that checks if<br />
+        the code of another program looks pretty
+      * **flake8** is a Python program that is able to <br />
+        *lint* your Python code for you.
+      * There are many more linters, basically every<br />
+        programming language has it's own.
+      * If you want to learn how Python code should be written<br />
+        grab some popcorn and read the famous [PEP008](https://www.python.org/dev/peps/pep-0008/)<br />
+        Not now! It's a long read ;)
     </script>
   </section>
 
