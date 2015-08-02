@@ -1,0 +1,109 @@
+<section>
+  {% with active=active %}{% include "source/table_of_content.html" %}{% endwith %}
+  <section data-markdown>
+    <script type="text/template">
+      ##A Command-Line Crash Crouse
+
+      * The command line is a window where you can execute text-commands
+      * On Windows it is called "PowerShell"
+      * On OSX and Ubuntu it is called the "Terminal"
+      * For simplicity, we will always call it the "Terminal"
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Windows: The PowerShell
+
+      * Open the Start-menu and search for "PowerShell"
+      * You might want to drag it onto your Desktop
+      * You will open this A LOT
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##OSX & Ubuntu: The Terminal
+
+      * Open your computer search
+      * That's Spotlight on OSX (press COMMAND+SPACE)
+      * That's the Ubuntu icon at the top of the sidebar
+      * Search for "Terminal"
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Your Home Folder
+
+      * Type **pwd** into the terminal
+      * It will show which folder you are currently in
+      * For a newly opened terminal, that is your home folder
+      * Your home folder is also called "**~**" (tilde)
+      * No matter where you are, you can type **cd ~**<br />
+        to get into your home folder
+      * By the way: **pwd** stands for **print working directory**
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##List The Current Folder
+
+      * By the way, "folder" and "directory" is the same
+      * I say folder, becayse it's shorter to write :)
+      * Type **ls** to list the content of the current folder
+      * By the way: **ls** stands for **list**
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Move into another folder
+
+      * Press **TAB** to autocomplete things
+      * Type **cd ~/Documents** to move into the<br />
+        Documents folder in your home directory
+      * By the way: **cd** stands for **change directory**
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Create a new folder
+
+      * Type **cd ~** to move into your home folder
+      * Type **mkdir Projects** to create a new folder<br />
+        called "Projects"
+      * How about creating a folder for our first project as well?
+      * Type **cd ~/Projects** and then **mkdir test**
+      * By the way: **mkdir** stands for **make directory**
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Create a new file
+
+      * Type **cd ~/Projects/test** to move into your test project folder
+      * On OSX/Ubuntu, type **touch test.py** to create a new file called "test.py"
+      * On Windows, type **echo $null >> test.py**
+      * So sorry, Windows doesn't have a nicer command for creating files :(
+      * Type **ls** to see if your new file is there
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ## High-Five!
+
+      * This is just the tip of the iceberg
+      * But it will get you through this tutorial :)
+      * Whenever you see black boxes with commands in these slides,<br />
+        it means you should type something into your terminal:
+        ```bash
+        black boxes like this
+        ```
+    </script>
+  </section>
+</section>

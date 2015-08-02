@@ -4,6 +4,7 @@
   <ul>
     {% with color="#17BAF9" %}
     <li><span {% if active == 'intro' %}class="toc-active" style="color: {{ color }};"{% endif %}>Introduction</span></li>
+    <li><span {% if active == 'terminal' %}class="toc-active" style="color: {{ color }};"{% endif %}>A Command-Line Crash Course</span></li>
     <li><span {% if active == 'install-python' %}class="toc-active" style="color: {{ color }};"{% endif %}>Install Python 2.7</span></li>
     <li><span {% if active == 'starting-python' %}class="toc-active" style="color: {{ color }};"{% endif %}>Starting Python from the Terminal</span></li>
     <li><span {% if active == 'install-virtualenv' %}class="toc-active" style="color: {{ color }};"{% endif %}>Install Virtualenv & Virtualenvwrapper</span></li>
