@@ -729,14 +729,52 @@ for number in range(10):
     <script type="text/template">
       ##Debugging your program
 
+      * This is an advanced topic
+      * We will not have enough time to train this<br />
+        during the workshop
+      * I'm putting this into the slides because it is<br />
+        the last crucial tool that you need for real<br />
+        software development
       * Instal ipdb
+        ```bash
+        # On OSX/Ubuntu:
+        sudo pip install ipdb
 
-      ```bash
-      sudo pip install ipdb
-      ```
+        # On Windows:
+        pip install ipdb
+        ```
+    </script>
+  </section>
 
-      * Insert new line below ``get_current_time`` and press F7
-      * Run your program with ``python myprogram.py``
+  <section data-markdown>
+    <script type="text/template">
+      ##Place a breakpoint into your code
+
+      * When debugging programs, you place so called **breakpoints**
+      * For Python, you need to paste this into your code:
+        ```python
+        import ipdb; ipdb.set_trace()
+        ```
+      * Luckily, Atom has a plugin for this, so you can<br />
+        just press **F7** at the position where you want the<br />
+        breakpoint.
+    </script>
+  </section>
+
+  <section data-markdown>
+    <script type="text/template">
+      ##Now run your program
+
+      * After placing the breakpoint, run your program as usual
+        ```bash
+        python your_filename.py
+        ```
+      * Instead of executing normally, the program will<br />
+        stop at your breakpoint
+      * Now you have all the time in the world to inspect<br />
+        your variables
+      * You can also move to the next line in the program<br />
+        one step at a time
     </script>
   </section>
 
@@ -744,13 +782,16 @@ for number in range(10):
     <script type="text/template">
       ##How to use ipdb
 
-      * Press ``?`` to get all possible commands
-      * Press ``? bt`` to get help for the ``bt`` command
+      * When you are inside of the ipdb debugger:
+      * Press **?** to get all possible commands
+      * Press **? bt** to get help for the **bt** command
       * **l**: Shows the current line
       * **bt**: Shows the full stack trace
       * **n**: Jumps to the next line
       * **a**: Shows all arguments of the current function
+      * **c**: Continue execution until the program ends
       * Type in a variable name to see it's value
+      * You can even change variables and continue the program
     </script>
   </section>
 </section>
@@ -791,6 +832,8 @@ for number in range(10):
     <script type="text/template">
       ##Stay in touch!
 
+      * Join our Slack community at http://pyladies-sg.slack.com<br />
+        (ask Martin for an invite, if you don't have one)
       * Follow [PyLadies Singapore](https://www.facebook.com/PyLadiesSG) on Facebook
       * Follow [@PyLadiesSG](https://twitter.com/pyladiessg) on Twitter
       * Follow [Python User Group Singapore](https://www.facebook.com/groups/pythonsg/) on Facebook
