@@ -56,6 +56,8 @@
     <script type="text/template">
       # Welcome to Python
       #### An introduction to setup your Computer<br /> for Python programming
+
+      <small>Press SPACE or SHIFT+SPACE to move through the slides...</small>
     </script>
 </section>
 <section data-markdown>
@@ -667,44 +669,35 @@ echo "source /usr/local/bin/virtualenvwrapper.sh" >> ~/.bashrc
     <script type="text/template">
       ##Your first Python program!
 
-      * Create a "``Projects``" folder in your home folder
-      * Create a "``test``" folder inside the "``Projects``" folder
-      * Create a virtual environment: "``mkvirtualenv test``"
-      * Start "``atom .``" inside the "``test``" folder
-      * Create a file "``myprogram.py``" in Atom
+      * Open [the first chapter of Learn Python The Hard Way](http://learnpythonthehardway.org/book/ex1.html)
+      * Let's create a folder for all the exercises of the book:
+        ```bash
+        cd ~/Projects
+        mkdir lpthw
+        cd lpthw
+
+        # On OSX/Ubuntu:
+        touch ex1.py
+
+        # On Windows:
+        echo $null >> ex1.py
+        ```
+      * Start Atom:
+        ````bash
+        atom .
+        ```
     </script>
-  </section>
-
-  <section>
-    <h2>myprogram.py</h2>
-
-    <pre><code class="py" style="height: 600px;">
-import datetime
-my_variable = "Foobar"
-
-def get_current_time():
-    return datetime.datetime.now()
-
-print my_variable
-print get_current_time()
-
-for number in range(10):
-    if number == 5:
-        print "Number 5 is the best!"
-    else:
-        print number
-    </code></pre>
   </section>
 
   <section data-markdown>
     <script type="text/template">
-      ##Run your program
+      ##Don't give up!
 
-      1. In your terminal, type:
-      
-      ```
-      python myprogram.py
-      ```
+      1. LPTHW is an awesome book
+      1. You can actually finish all chapters in a few days
+      1. It will give you a good idea of how to use Python
+      1. If you have problems, join our Slack channel and<br />
+         just ask, we will make sure to get you through the book!
     </script>
   </section>
 </section>
@@ -758,6 +751,8 @@ for number in range(10):
       * Luckily, Atom has a plugin for this, so you can<br />
         just press **F7** at the position where you want the<br />
         breakpoint.
+      * When you are done, press **SHIFT+F7** to remove<br />
+        all breakpoints
     </script>
   </section>
 
